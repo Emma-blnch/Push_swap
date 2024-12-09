@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reverse_rotate.c                                :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 14:15:39 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/09 14:37:04 by eblancha         ###   ########.fr       */
+/*   Created: 2024/11/12 10:05:03 by eblancha          #+#    #+#             */
+/*   Updated: 2024/11/15 12:27:01 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_push_swap.h"
+#include "libft.h"
 
-void	rra(t_stack *stack)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	// last element becomes first in a
-}
+	t_list	*tmp;
 
-void	rrb(t_stack *stack)
-{
-	// last element becomes first in b
-}
-
-void	rrr(t_stack *stack_a, t_stack *stack_b)
-{
-	// rra + rrb
+	if (!lst || !del || !*lst)
+		return ;
+	while (lst && *lst)
+	{
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
+	}
 }

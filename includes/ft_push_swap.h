@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:06 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/09 14:41:19 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/09 15:57:59 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <string.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <limits.h>
+# include "../libft/libft.h"
+# include "../libft/printf/ft_printf.h"
 
 typedef struct s_node {
 	int				value;
@@ -33,6 +36,7 @@ int	main(int argc, char **argv);
 // Initiliaze + check
 t_stack	*init_stack(void);
 int			is_valid_stack(t_stack *stack);
+int	ft_atoi_safe(const char *str, int *is_valid);
 
 // swap
 void	sa(t_stack *stack);

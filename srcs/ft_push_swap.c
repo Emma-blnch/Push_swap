@@ -6,11 +6,11 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/09 14:34:29 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/09 15:57:50 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_push_swap.h"
+#include "../includes/ft_push_swap.h"
 
 t_stack	*init_stack(void)
 {
@@ -77,23 +77,21 @@ int	main(int argc, char **argv)
 	int		value;
 
 	if (argc < 2)
-		return (1);
+		return (ft_printf("Error\n"), 1);
 	stack_a = init_stack();
 	if (!stack_a)
-		return (1);
+		return (ft_printf("Error: Memory allocation failed\n"), 1);
 	value = 0;
 	i = 1;
 	while (i < argc)
 	{
-		value = atoi(argv[i]);
+		if (!ft_atoi_safe(argv[1], &value))
+			return (ft_printf("Error\n"), 1);
 		push(stack_a, value);
 		i++;
 	}
 	if (is_valid_stack(stack_a) == 0)
-	{
-		printf("Error: stack contains duplicate values\n");
-		return (1);
-	}
+		return (printf("Error: stack contains duplicate values\n"), 1);
 	print_stack(stack_a);
 	return (0);
 }

@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: eblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 14:15:53 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/09 14:36:35 by eblancha         ###   ########.fr       */
+/*   Created: 2024/11/07 09:17:23 by eblancha          #+#    #+#             */
+/*   Updated: 2024/11/19 10:30:30 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_push_swap.h"
+#include "libft.h"
 
-void	sa(t_stack *stack)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	// swap first and second top in a
-}
+	size_t	i;
 
-void	sb(t_stack *stack)
-{
-	// swap first and second top in b
-}
-
-void	ss(t_stack *stack_a, t_stack *stack_b)
-{
-	// sa + sb
+	i = 0;
+	while (i < n)
+	{
+		*(unsigned char *)(s + i) = (unsigned char)c;
+		i++;
+	}
+	return (s);
 }
