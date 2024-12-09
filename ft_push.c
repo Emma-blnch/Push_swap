@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eblancha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 14:15:24 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/09 14:15:26 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/09 14:37:15 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
 
-pa (push a)
+void	pa(t_stack *stack)
 {
-    // take top 1 in b and put it on top of a
+	// take top 1 in b and put it on top of a
 }
 
-pb (push b)
+void	pb(t_stack *stack)
 {
-    // same for b
+	// same for b
 }
