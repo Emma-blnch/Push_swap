@@ -1,5 +1,55 @@
 #include "../includes/ft_push_swap.h"
 
+// check duplicates
+int	is_valid_stack(t_stack *stack)
+{
+	t_node	*current;
+	t_node	*checker;
+
+	if (!stack || !stack->top)
+		return (0);
+	current = stack->top;
+	while (current)
+	{
+		checker = current->next;
+		while (checker)
+		{
+			if (current->value == checker->value)
+				return (0);
+			checker = checker->next;
+		}
+		current = current->next;
+	}
+	return (1);
+}
+
+// free stack
+void	free_stack(t_stack *stack)
+{
+	t_node	*current;
+	t_node	*next;
+
+	if (!stack)
+		return ;
+	current = stack->top;
+	while(current)
+	{
+		next = current->next;
+		free(current);
+		current = next;
+	}
+	free(stack);
+}
+
+// check errors
+void	error_exit(t_stack *stack)
+{
+	ft_printf("Error\n");
+	free_stack(stack);
+	exit(EXIT_FAILURE);
+}
+
+// atoi
 static int  check_overflow(long result, int sign, char next_digit)
 {
     long    test;

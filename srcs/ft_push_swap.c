@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/09 15:57:50 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/10 15:30:42 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,62 +36,55 @@ void	push(t_stack *stack, int value)
 	stack->top = new_node;
 	stack->size++;
 }
-
-int	is_valid_stack(t_stack *stack)
-{
-	t_node	*current;
-	t_node	*checker;
-
-	current = stack->top;
-	while (current)
-	{
-		checker = current->next;
-		while (checker)
-		{
-			if (current-> value == checker->value)
-				return (0);
-			checker = checker->next;
-		}
-		current = current->next;
-	}
-	return (1);
-}
-
+// pour tests
 void	print_stack(t_stack *stack)
 {
 	t_node	*current;
 
 	current = stack->top;
-	printf("Stack (size: %d):\n", stack->size);
+	ft_printf("Stack (size: %d):\n", stack->size);
 	while (current)
 	{
-		printf("%d\n", current->value);
+		ft_printf("%d\n", current->value);
 		current = current->next;
 	}
+}
+
+int validate_input(int argc, char **argv, t_stack *stack)
+{
+	int		i;
+	int		value;
+
+	value = 0;
+	i = 1;
+	while (i < argc)
+	{
+		if (!ft_atoi_safe(argv[i], &value))
+			return (ft_printf("Error\n"), 0);
+		else
+			push(stack, ft_atoi_safe(argv[i], &value));
+		i++;
+	}
+	if (!is_valid_stack(stack))
+	{
+		free_stack(stack);
+		return (ft_printf("Error stack not valid\n"), 0);
+	}
+	return (1);
 }
 
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
-	int		i;
-	int		value;
 
 	if (argc < 2)
 		return (ft_printf("Error\n"), 1);
 	stack_a = init_stack();
 	if (!stack_a)
-		return (ft_printf("Error: Memory allocation failed\n"), 1);
-	value = 0;
-	i = 1;
-	while (i < argc)
-	{
-		if (!ft_atoi_safe(argv[1], &value))
-			return (ft_printf("Error\n"), 1);
-		push(stack_a, value);
-		i++;
-	}
-	if (is_valid_stack(stack_a) == 0)
-		return (printf("Error: stack contains duplicate values\n"), 1);
+		return (ft_printf("Error\n"), 1);
+	if (!validate_input(argc, argv, stack_a))
+		return (free_stack(stack_a), 1);
 	print_stack(stack_a);
+	free_stack(stack_a);
 	return (0);
 }
