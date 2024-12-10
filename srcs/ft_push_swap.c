@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/10 15:30:42 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/10 15:42:01 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,22 +54,20 @@ int validate_input(int argc, char **argv, t_stack *stack)
 {
 	int		i;
 	int		value;
+	int		result;
 
 	value = 0;
 	i = 1;
 	while (i < argc)
 	{
-		if (!ft_atoi_safe(argv[i], &value))
+		result = ft_atoi_safe(argv[i], &value);
+		if (!result)
 			return (ft_printf("Error\n"), 0);
-		else
-			push(stack, ft_atoi_safe(argv[i], &value));
+		push(stack, result);
 		i++;
 	}
 	if (!is_valid_stack(stack))
-	{
-		free_stack(stack);
 		return (ft_printf("Error stack not valid\n"), 0);
-	}
 	return (1);
 }
 
