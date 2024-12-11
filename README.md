@@ -1,7 +1,7 @@
-ne marche pas avec nombre negatif
+Marche
 
-si "42ad" ca prend 42 au lieu de error
+Normed
 
-error good si "abc" au lieu de chiffre
-ok si doublon
-ok avec nombres positifs sans doublons
+Reste a faire :
+-> l'algo de tri
+-> les fonctions pour chaque instruction
