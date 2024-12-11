@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/10 15:42:01 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/11 16:46:17 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	push(t_stack *stack, int value)
 	stack->top = new_node;
 	stack->size++;
 }
+
 // pour tests
 void	print_stack(t_stack *stack)
 {
@@ -50,7 +51,7 @@ void	print_stack(t_stack *stack)
 	}
 }
 
-int validate_input(int argc, char **argv, t_stack *stack)
+int	validate_input(int argc, char **argv, t_stack *stack)
 {
 	int		i;
 	int		value;

@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:06 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/10 15:27:49 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/11 16:45:38 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ typedef struct s_stak {
 }	t_stack;
 
 // Main
-int	main(int argc, char **argv);
+int		main(int argc, char **argv);
 
 // Initiliaze, check and free stack
-t_stack	*init_stack(void);
-int			is_valid_stack(t_stack *stack);
-int			ft_atoi_safe(const char *str, int *is_valid);
-int			validate_input(int argc, char **argv, t_stack *stack);
+int		is_valid_stack(t_stack *stack);
+int		ft_atoi_safe(const char *str, int *is_valid);
+int		validate_input(int argc, char **argv, t_stack *stack);
 void	free_stack(t_stack *stack);
+t_stack	*init_stack(void);
 
 // Error messages
 void	error_exit(t_stack *stack);
