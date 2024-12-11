@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push_swap_utils.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eblancha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 16:32:33 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/11 16:36:14 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/11 17:01:52 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,18 +80,16 @@ int	ft_atoi_safe(const char *str, int *is_valid)
 	long	result;
 
 	sign = 1;
-	*is_valid = 0;
 	result = 0;
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
 	if ((*str == '-' || *str == '+'))
 	{
-		if ((*str++ == '-' || *str++ == '+'))
-			return (0);
 		if (*str == '-')
 			sign *= -1;
+		str++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (*str >= '0' && *str <= '9' && *str)
 	{
 		if (check_overflow(result, sign, *str))
 		{
@@ -100,5 +98,7 @@ int	ft_atoi_safe(const char *str, int *is_valid)
 		}
 		result = result * 10 + (*str++ - '0');
 	}
+	if (*str != '\0')
+		return (*is_valid = 1, 0);
 	return ((int)result * sign);
 }

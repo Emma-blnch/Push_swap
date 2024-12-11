@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/11 16:46:17 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/11 17:01:45 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	validate_input(int argc, char **argv, t_stack *stack)
 		i++;
 	}
 	if (!is_valid_stack(stack))
-		return (ft_printf("Error stack not valid\n"), 0);
+		return (ft_printf("Error\n"), 0);
 	return (1);
 }
 
