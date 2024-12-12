@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:06 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/12 10:20:19 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/12 11:27:57 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,9 @@ void	rr(t_stack *stack_a, t_stack *stack_b);
 void	rra(t_stack *stack_a);
 void	rrb(t_stack *stack_b);
 void	rrr(t_stack *stack_a, t_stack *stack_b);
+
+// short sort
+void	sort_two_numbers(t_stack *stack_a);
+void	sort_three_numbers(t_stack *stack_a);
 
 #endif

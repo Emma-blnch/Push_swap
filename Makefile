@@ -6,7 +6,7 @@
 #    By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/09 15:25:09 by eblancha          #+#    #+#              #
-#    Updated: 2024/12/12 10:18:47 by eblancha         ###   ########.fr        #
+#    Updated: 2024/12/12 11:26:46 by eblancha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ LIBFT = $(LIBFT_DIR)/libft.a
 INC_DIR = includes
 
 SRCS = srcs/ft_push_swap.c srcs/ft_push_swap_utils.c srcs/ft_push.c srcs/ft_swap.c srcs/ft_rotate.c \
-srcs/ft_reverse_rotate.c #srcs/ft_push_swap_utils.c
+srcs/ft_reverse_rotate.c srcs/ft_short_sort.c #srcs/ft_push_swap_utils.c
 
 OBJS = $(SRCS:.c=.o)
 
