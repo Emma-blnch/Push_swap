@@ -6,23 +6,52 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 14:15:39 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/09 15:35:39 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/12 10:25:59 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_push_swap.h"
 
-void	rra(t_stack *stack)
+void	rra(t_stack *stack_a)
 {
-	// last element becomes first in a
+	t_node	*last;
+	t_node	*prev;
+
+	if (!stack_a || stack_a->size < 2)
+		return ;
+	prev = NULL;
+	last = stack_a->top;
+	while (last->next)
+	{
+		prev = last;
+		last = last->next;
+	}
+	prev->next = NULL;
+	last->next = stack_a->top;
+	stack_a->top = last;
 }
 
-void	rrb(t_stack *stack)
+void	rrb(t_stack *stack_b)
 {
-	// last element becomes first in b
+	t_node	*last;
+	t_node	*prev;
+
+	if (!stack_b || stack_b->size < 2)
+		return ;
+	prev = NULL;
+	last = stack_b->top;
+	while (last->next)
+	{
+		prev = last;
+		last = last->next;
+	}
+	prev->next = NULL;
+	last->next = stack_b->top;
+	stack_b->top = last;
 }
 
 void	rrr(t_stack *stack_a, t_stack *stack_b)
 {
-	// rra + rrb
+	rra(stack_a);
+	rrb(stack_b);
 }

@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:06 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/11 17:32:19 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/12 10:20:19 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,15 @@ int		is_valid_stack(t_stack *stack);
 int		ft_atoi_safe(const char *str, int *is_valid);
 int		validate_input(int argc, char **argv, t_stack *stack);
 void	free_stack(t_stack *stack);
-t_stack	*init_stack(void);
 void	push(t_stack *stack, int value);
+t_stack	*init_stack(void);
 
 // Error messages
 void	error_exit(t_stack *stack);
 
 // swap
-void	sa(t_stack *stack);
-void	sb(t_stack *stack);
+void	sa(t_stack *stack_a);
+void	sb(t_stack *stack_b);
 void	ss(t_stack *stack_a, t_stack *stack_b);
 
 // push
@@ -54,13 +54,13 @@ void	pa(t_stack *stack_a, t_stack *stack_b);
 void	pb(t_stack *stack_b, t_stack *stack_a);
 
 // rotate
-void	ra(t_stack *stack);
-void	rb(t_stack *stack);
+void	ra(t_stack *stack_a);
+void	rb(t_stack *stack_b);
 void	rr(t_stack *stack_a, t_stack *stack_b);
 
 // reverse rotate
-void	rra(t_stack *stack);
-void	rrb(t_stack *stack);
+void	rra(t_stack *stack_a);
+void	rrb(t_stack *stack_b);
 void	rrr(t_stack *stack_a, t_stack *stack_b);
 
 #endif
