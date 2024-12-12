@@ -14,9 +14,9 @@ I also learned how to implement **individual tests** for each function I did. Ev
 
 ## ⚙️ **Requirements**
 The function must be written in C. It must compile with clang and the following flags :
-- [x] -Wall
-- [x] -Wextra
-- [x] -Werror
+- -Wall
+- -Wextra
+- -Werror
 
 You have at your disposal a **set of integer values**, **2 stacks**, and a **set of instructions** to manipulate both stacks.
 
