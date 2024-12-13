@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:06 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/13 14:05:01 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/13 14:19:21 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ void	sort_four_numbers(t_stack *stack_a, t_stack *stack_b);
 void	sort_five_numbers(t_stack *stack_a, t_stack *stack_b);
 
 // find minimum number in stack and check if sorted
-int	find_minimum(t_stack *stack);
-int	find_min_position(t_stack *stack, int min);
-int is_sorted(t_stack *stack);
+int		find_minimum(t_stack *stack);
+int		find_min_position(t_stack *stack, int min);
+int		is_sorted(t_stack *stack);
 
 #endif
