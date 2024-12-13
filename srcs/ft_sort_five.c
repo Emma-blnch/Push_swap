@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_five.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eblancha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 11:09:16 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/13 11:14:41 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/13 14:06:14 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_push_swap.h"
 
-static int	find_minimum(t_stack *stack)
+int	find_minimum(t_stack *stack)
 {
 	int			min;
 	t_node		*current;
@@ -28,7 +28,7 @@ static int	find_minimum(t_stack *stack)
 	return (min);
 }
 
-static int	find_min_position(t_stack *stack, int min)
+int	find_min_position(t_stack *stack, int min)
 {
 	int			position;
 	t_node		*current;

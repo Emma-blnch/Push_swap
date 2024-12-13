@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 14:15:39 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/12 10:25:59 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/13 12:51:35 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	rra(t_stack *stack_a)
 	prev->next = NULL;
 	last->next = stack_a->top;
 	stack_a->top = last;
+	ft_printf("rra\n");
 }
 
 void	rrb(t_stack *stack_b)
@@ -48,6 +49,7 @@ void	rrb(t_stack *stack_b)
 	prev->next = NULL;
 	last->next = stack_b->top;
 	stack_b->top = last;
+	ft_printf("rrb\n");
 }
 
 void	rrr(t_stack *stack_a, t_stack *stack_b)
