@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/12 11:27:48 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/13 09:19:45 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,8 @@ int	main(int argc, char **argv)
 	print_stack(stack_a);
 	if (stack_a->size == 2)
 		sort_two_numbers(stack_a);
-	// if (stack_a->size == 3)
-	// 	sort_three_numbers(stack_a);
+	if (stack_a->size == 3)
+		sort_three_numbers(stack_a);
 	printf("after sort\n");
 	print_stack(stack_a);
 	free_stack(stack_a);
