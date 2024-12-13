@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/13 09:19:45 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/13 11:15:14 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ int	validate_input(int argc, char **argv, t_stack *stack)
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
+	t_stack	*stack_b;
 
 	if (argc < 2)
 		return (ft_printf("Error\n"), 1);
@@ -83,13 +84,18 @@ int	main(int argc, char **argv)
 		return (ft_printf("Error\n"), 1);
 	if (!validate_input(argc, argv, stack_a))
 		return (free_stack(stack_a), 1);
-	print_stack(stack_a);
+	stack_b = init_stack();
+	if (!stack_b)
+		return (ft_printf("Error\n"), 1);
 	if (stack_a->size == 2)
 		sort_two_numbers(stack_a);
 	if (stack_a->size == 3)
 		sort_three_numbers(stack_a);
+	if (stack_a->size == 5)
+		sort_five_numbers(stack_a, stack_b);
 	printf("after sort\n");
 	print_stack(stack_a);
 	free_stack(stack_a);
+	free_stack(stack_b);
 	return (0);
 }
