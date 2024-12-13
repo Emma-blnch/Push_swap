@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 11:09:16 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/13 14:06:14 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/13 17:21:57 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	sort_five_numbers(t_stack *stack_a, t_stack *stack_b)
 	int	i;
 	int	position;
 
-	if (!stack_a || !stack_b || stack_a->size < 5)
+	if (!stack_a || !stack_b || stack_a->size < 5 || is_sorted(stack_a))
 		return ;
 	i = 0;
 	while (i < 2)

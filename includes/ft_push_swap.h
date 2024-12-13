@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:06 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/13 14:19:21 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/13 17:16:11 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,12 @@ void	sort_five_numbers(t_stack *stack_a, t_stack *stack_b);
 int		find_minimum(t_stack *stack);
 int		find_min_position(t_stack *stack, int min);
 int		is_sorted(t_stack *stack);
+
+// radix sort
+int		find_max_bits(t_stack *stack);
+void	sort_array(int *array, int size);
+void	normalize_stack(t_stack *stack);
+void	sort_bit(t_stack *stack_a, t_stack *stack_b, int bit);
+void	radix_sort(t_stack *stack_a, t_stack *stack_b);
 
 #endif
