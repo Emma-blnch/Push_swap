@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/13 17:13:59 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/17 13:07:46 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,7 @@ t_stack	*init_stack(void)
 	stack->size = 0;
 	return (stack);
 }
-// push number first number in to bottom
-// void	push(t_stack *stack, int value)
-// {
-// 	t_node	*new_node;
 
-// 	new_node = malloc(sizeof(t_node));
-// 	if (!new_node)
-// 		return ;
-// 	new_node->value = value;
-// 	new_node->next = stack->top;
-// 	stack->top = new_node;
-// 	stack->size++;
-// }
-
-// push first number in top
 void	push(t_stack *stack, int value)
 {
 	t_node	*new_node;
@@ -88,7 +74,7 @@ int	validate_input(int argc, char **argv, t_stack *stack)
 	{
 		result = ft_atoi_safe(argv[i], &value);
 		if (!result)
-			return (ft_printf("Error\n"), 0);
+			return (0);
 		push(stack, result);
 		i++;
 	}
@@ -122,6 +108,7 @@ int	main(int argc, char **argv)
 		sort_five_numbers(stack_a, stack_b);
 	if (stack_a->size > 5)
 		radix_sort(stack_a, stack_b);
+	print_stack(stack_a);
 	return (free_stack(stack_a), free_stack(stack_b), 0);
 }
 

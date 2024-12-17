@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:06 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/13 17:16:11 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/17 13:04:38 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		ft_atoi_safe(const char *str, int *is_valid);
 int		validate_input(int argc, char **argv, t_stack *stack);
 void	free_stack(t_stack *stack);
 void	push(t_stack *stack, int value);
+void	push_stack(t_stack *stack, int value);
 t_stack	*init_stack(void);
 
 // Error messages
