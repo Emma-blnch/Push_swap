@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_radix_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eblancha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 13:57:25 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/17 14:00:33 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/17 14:47:30 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,25 @@ void	update_stack_values(t_stack *stack, int *values)
 		current = current->next;
 	}
 }
+
+// int	find_closest_bit(t_stack *stack, int bit)
+// {
+// 	int		position;
+// 	int		i;
+// 	t_node	*current;
+
+// 	current = stack->top;
+// 	position = -1;
+// 	i = 0;
+// 	while (current)
+// 	{
+// 		if (((current->value >> bit) & 1) == 0)
+// 		{
+// 			position = i;
+// 			break ;
+// 		}
+// 		current = current->next;
+// 		i++;
+// 	}
+// 	return (position);
+// }

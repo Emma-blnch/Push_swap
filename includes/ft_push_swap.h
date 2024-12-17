@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:06 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/17 13:55:40 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/17 14:47:13 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ int		is_sorted(t_stack *stack);
 
 // radix sort
 int		find_max_bits(t_stack *stack);
+//int		find_closest_bit(t_stack *stack, int bit);
 int		*get_stack_values(t_stack *stack);
 void	sort_array(int *array, int size);
 void	normalize_stack(t_stack *stack);
