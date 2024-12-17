@@ -1,5 +1,3 @@
-Reste a faire :
--> atoi_safe prenne en compte le 0
 <h1 align="center"> 💻 <strong>Push_swap</strong> </h1>
 
 ## 🏷️ **About the project**
