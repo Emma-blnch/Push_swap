@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_radix_sort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eblancha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 17:16:39 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/13 17:21:15 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/17 13:30:24 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ void	normalize_stack(t_stack *stack)
 	t_node	*current;
 
 	i = 0;
+	if (!stack || stack->size == 0)
+		return ;
 	values = malloc(sizeof(int) * stack->size);
 	if (!values)
 		return ;
@@ -103,7 +105,7 @@ void	sort_bit(t_stack *stack_a, t_stack *stack_b, int bit)
 	size = stack_a->size;
 	while (i < size)
 	{
-		if (((stack_a->top->value >> bit) & 1) == 0)
+		if (((stack_a->top->value >> bit) & 1) == 1)
 			ra(stack_a);
 		else
 			pb(stack_b, stack_a);

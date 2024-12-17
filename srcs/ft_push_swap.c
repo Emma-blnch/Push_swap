@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/17 13:07:46 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/17 13:31:45 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,10 @@ int	main(int argc, char **argv)
 	if (stack_a->size == 5)
 		sort_five_numbers(stack_a, stack_b);
 	if (stack_a->size > 5)
+	{
+		normalize_stack(stack_a);
 		radix_sort(stack_a, stack_b);
+	}
 	print_stack(stack_a);
 	return (free_stack(stack_a), free_stack(stack_b), 0);
 }
@@ -125,16 +128,18 @@ int	main(int argc, char **argv)
 // 	print_stack(stack);
 //     normalize_stack(stack);
 // 	printf("after normalization:\n");
-//     print_stack(stack); // Attend : 3 4 2 1 0 5
+//     print_stack(stack);
 //     free_stack(stack);
 // }
 // void test_sort_bit() {
 //     t_stack *stack_a = init_stack();
 //     t_stack *stack_b = init_stack();
+//     push(stack_a, 4);
+//     push(stack_a, 5);
 //     push(stack_a, 3);
 //     push(stack_a, 2);
-//     push(stack_a, 1);
-//     push(stack_a, 0);
+// 	push(stack_a, 1);
+// 	push(stack_a, 8);
 
 // 	printf("Before sort_bit:\n");
 //     print_stack(stack_a);
@@ -148,7 +153,7 @@ int	main(int argc, char **argv)
 
 // int main()
 // {
-// 	test_normalize_stack();
-// 	// test_sort_bit();
+// 	// test_normalize_stack();
+// 	test_sort_bit();
 // 	return (0);
 // }
