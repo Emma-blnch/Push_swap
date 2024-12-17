@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/17 13:58:24 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/17 14:19:42 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,3 +161,7 @@ int	main(int argc, char **argv)
 // 	test_sort_bit();
 // 	return (0);
 // }
+
+
+// commande shell : ARG=$(seq -50 50 | shuf -n 10 | tr '\n' ' ')
+// echo "$ARG" | xargs ./push_swap | ./checker_linux $ARG
