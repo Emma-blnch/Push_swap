@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/17 13:41:48 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/17 13:58:24 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,20 +48,6 @@ void	push(t_stack *stack, int value)
 	stack->size++;
 }
 
-// pour tests
-void	print_stack(t_stack *stack)
-{
-	t_node	*current;
-
-	current = stack->top;
-	ft_printf("Stack (size: %d):\n", stack->size);
-	while (current)
-	{
-		ft_printf("%d\n", current->value);
-		current = current->next;
-	}
-}
-
 int	validate_input(int argc, char **argv, t_stack *stack)
 {
 	int		i;
@@ -83,6 +69,23 @@ int	validate_input(int argc, char **argv, t_stack *stack)
 	return (1);
 }
 
+void	choose_sort_algo(t_stack *stack_a, t_stack *stack_b)
+{
+	if (stack_a->size == 2)
+		sort_two_numbers(stack_a);
+	else if (stack_a->size == 3)
+		sort_three_numbers(stack_a);
+	else if (stack_a->size == 4)
+		sort_four_numbers(stack_a, stack_b);
+	else if (stack_a->size == 5)
+		sort_five_numbers(stack_a, stack_b);
+	else if (stack_a->size > 5)
+	{
+		normalize_stack(stack_a);
+		radix_sort(stack_a, stack_b);
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
@@ -98,22 +101,22 @@ int	main(int argc, char **argv)
 	stack_b = init_stack();
 	if (!stack_b)
 		return (ft_printf("Error\n"), 1);
-	if (stack_a->size == 2)
-		sort_two_numbers(stack_a);
-	if (stack_a->size == 3)
-		sort_three_numbers(stack_a);
-	if (stack_a->size == 4)
-		sort_four_numbers(stack_a, stack_b);
-	if (stack_a->size == 5)
-		sort_five_numbers(stack_a, stack_b);
-	if (stack_a->size > 5)
-	{
-		normalize_stack(stack_a);
-		radix_sort(stack_a, stack_b);
-	}
-	print_stack(stack_a);
+	choose_sort_algo(stack_a, stack_b);
 	return (free_stack(stack_a), free_stack(stack_b), 0);
 }
+
+// void	print_stack(t_stack *stack)
+// {
+// 	t_node	*current;
+
+// 	current = stack->top;
+// 	ft_printf("Stack (size: %d):\n", stack->size);
+// 	while (current)
+// 	{
+// 		ft_printf("%d\n", current->value);
+// 		current = current->next;
+// 	}
+// }
 
 // void test_normalize_stack() {
 //     t_stack *stack = init_stack();
@@ -131,6 +134,7 @@ int	main(int argc, char **argv)
 //     print_stack(stack);
 //     free_stack(stack);
 // }
+
 // void test_sort_bit() {
 //     t_stack *stack_a = init_stack();
 //     t_stack *stack_b = init_stack();

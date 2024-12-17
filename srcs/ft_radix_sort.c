@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 17:16:39 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/17 13:30:24 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/17 13:57:15 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,38 +61,13 @@ void	sort_array(int *array, int size)
 
 void	normalize_stack(t_stack *stack)
 {
-	int		i;
 	int		*values;
-	t_node	*current;
 
-	i = 0;
 	if (!stack || stack->size == 0)
 		return ;
-	values = malloc(sizeof(int) * stack->size);
-	if (!values)
-		return ;
-	current = stack->top;
-	while (current)
-	{
-		values[i++] = current->value;
-		current = current->next;
-	}
+	values = get_stack_values(stack);
 	sort_array(values, stack->size);
-	current = stack->top;
-	while (current)
-	{
-		i = 0;
-		while (i < stack->size)
-		{
-			if (current->value == values[i])
-			{
-				current->value = i;
-				break ;
-			}
-			i++;
-		}
-		current = current->next;
-	}
+	update_stack_values(stack, values);
 	free(values);
 }
 
