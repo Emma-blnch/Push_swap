@@ -6,12 +6,11 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 11:09:16 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/19 13:48:16 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/19 13:59:06 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_push_swap.h"
-
 
 void	sort_five_numbers(t_stack *stack_a, t_stack *stack_b)
 {
