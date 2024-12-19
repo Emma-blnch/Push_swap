@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:06 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/17 14:47:13 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:37:39 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,7 @@ void	normalize_stack(t_stack *stack);
 void	sort_bit(t_stack *stack_a, t_stack *stack_b, int bit);
 void	radix_sort(t_stack *stack_a, t_stack *stack_b);
 void	update_stack_values(t_stack *stack, int *values);
+
+// void	print_stack(t_stack *stack);
 
 #endif
