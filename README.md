@@ -1,3 +1,5 @@
+normer et organiser, reste a faire un algo pour 100 nombres ou moins et check sujet correctement
+
 <h1 align="center"> 💻 <strong>Push_swap</strong> </h1>
 
 ## 🏷️ **About the project**
