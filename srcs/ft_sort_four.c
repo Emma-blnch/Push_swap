@@ -3,30 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_four.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eblancha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 14:19:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/13 14:21:17 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/19 13:35:50 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_push_swap.h"
-
-int	is_sorted(t_stack *stack)
-{
-	t_node	*current;
-
-	if (!stack || stack->size < 2)
-		return (1);
-	current = stack->top;
-	while (current->next)
-	{
-		if (current->value > current->next->value)
-			return (0);
-		current = current->next;
-	}
-	return (1);
-}
 
 void	sort_four_numbers(t_stack *stack_a, t_stack *stack_b)
 {

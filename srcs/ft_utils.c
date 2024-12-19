@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_swap_utils.c                               :+:      :+:    :+:   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 16:32:33 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/13 17:12:28 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/19 13:36:55 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_push_swap.h"
 
-// check duplicates
-int	is_valid_stack(t_stack *stack)
+
+int	is_sorted(t_stack *stack)
 {
 	t_node	*current;
-	t_node	*checker;
 
-	if (!stack || !stack->top)
-		return (0);
+	if (!stack || stack->size < 2)
+		return (1);
 	current = stack->top;
-	while (current)
+	while (current->next)
 	{
-		checker = current->next;
-		while (checker)
-		{
-			if (current->value == checker->value)
-				return (0);
-			checker = checker->next;
-		}
+		if (current->value > current->next->value)
+			return (0);
 		current = current->next;
 	}
 	return (1);
 }
 
-// free stack
 void	free_stack(t_stack *stack)
 {
 	t_node	*current;
@@ -53,7 +46,6 @@ void	free_stack(t_stack *stack)
 	free(stack);
 }
 
-// check errors
 void	error_exit(t_stack *stack)
 {
 	ft_printf("Error\n");
