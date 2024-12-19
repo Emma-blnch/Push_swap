@@ -65,6 +65,8 @@ int	find_insert_position(t_stack *stack_a, int value)
 	int		pos;
 	t_node	*current;
 
+	if (!stack_a->top)
+		return (0);
 	current = stack_a->top;
 	pos = 0;
 	while (current)
@@ -83,6 +85,8 @@ void	move_chunk_back_to_a(t_stack *stack_a, t_stack *stack_b)
 
 	while (stack_b->size > 0)
 	{
+		if (!stack_b->top)
+			break ;
 		printf("Stack B before moving back to A:\n");
         	print_stack(stack_b);
 		pos = find_insert_position(stack_a, stack_b->top->value);
@@ -97,6 +101,8 @@ void	move_chunk_back_to_a(t_stack *stack_a, t_stack *stack_b)
 
 void	smart_rotate(t_stack *stack, int pos)
 {
+	if (!stack->top)
+		return ;
 	if (pos <= stack->size / 2)
 	{
 		while (pos-- > 0)
