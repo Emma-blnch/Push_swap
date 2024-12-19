@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:06 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/19 14:37:39 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/19 15:06:30 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,16 @@ void	sort_five_numbers(t_stack *stack_a, t_stack *stack_b);
 
 // find minimum number in stack and check if sorted
 int		find_minimum(t_stack *stack);
+int		find_maximum(t_stack *stack);
 int		find_min_position(t_stack *stack, int min);
 int		is_sorted(t_stack *stack);
+
+// chunk sort
+int		find_insert_position(t_stack *stack_a, int value);
+void	move_chunk_to_b(t_stack *stack_a, t_stack *stack_b, int min, int max);
+void	move_chunk_back_to_a(t_stack *stack_a, t_stack *stack_b);
+void	smart_rotate(t_stack *stack, int pos);
+void	chunk_sort(t_stack *stack_a, t_stack *stack_b);
 
 // radix sort
 int		find_max_bits(t_stack *stack);
@@ -86,6 +94,6 @@ void	sort_bit(t_stack *stack_a, t_stack *stack_b, int bit);
 void	radix_sort(t_stack *stack_a, t_stack *stack_b);
 void	update_stack_values(t_stack *stack, int *values);
 
-// void	print_stack(t_stack *stack);
+void	print_stack(t_stack *stack);
 
 #endif

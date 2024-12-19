@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eblancha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 13:58:38 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/19 13:58:40 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/19 15:02:16 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ int	main(int argc, char **argv)
 	if (!stack_b)
 		return (ft_printf("Error\n"), 1);
 	choose_sort_algo(stack_a, stack_b);
+	print_stack(stack_a);
 	return (free_stack(stack_a), free_stack(stack_b), 0);
 }
