@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 17:16:39 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/19 13:39:07 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/19 13:54:23 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ void	radix_sort(t_stack *stack_a, t_stack *stack_b)
 	int	max_bits;
 	int	bit;
 
+	if (is_sorted(stack_a))
+		return ;
 	bit = 0;
 	max_bits = find_max_bits(stack_a);
 	while (bit < max_bits)

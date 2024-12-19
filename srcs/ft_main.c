@@ -6,7 +6,7 @@ int	main(int argc, char **argv)
 	t_stack	*stack_b;
 
 	if (argc < 2)
-		return (ft_printf("Error\n"), 1);
+		return (1);
 	stack_a = init_stack();
 	if (!stack_a)
 		return (ft_printf("Error\n"), 1);
