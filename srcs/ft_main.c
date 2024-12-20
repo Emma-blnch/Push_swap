@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 13:58:38 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/20 11:25:27 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/20 11:46:22 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ int	main(int argc, char **argv)
 		return (1);
 	stack_a = init_stack();
 	if (!stack_a)
-		return (ft_printf("Error\n"), 1);
+		error_exit(stack_a);
 	if (!validate_input(argc, argv, stack_a))
 		error_exit(stack_a);
 	stack_b = init_stack();
 	if (!stack_b)
-		return (ft_printf("Error\n"), 1);
+		error_exit(stack_b);
 	choose_sort_algo(stack_a, stack_b);
 	// print_stack(stack_a);
 	return (free_stack(stack_a), free_stack(stack_b), 0);
