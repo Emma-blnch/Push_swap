@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 17:16:39 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/19 13:59:36 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/20 11:52:23 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,30 +50,6 @@ void	sort_bit(t_stack *stack_a, t_stack *stack_b, int bit)
 	while (stack_b->size > 0)
 		pa(stack_a, stack_b);
 }
-
-// void	sort_bit(t_stack *stack_a, t_stack *stack_b, int bit)
-// {
-// 	int	size;
-// 	int	position;
-
-// 	size = stack_a->size;
-
-// 	while (size--)
-// 	{
-// 		if (((stack_a->top->value >> bit) & 1) == 0)
-// 			pb(stack_b, stack_a);
-// 		else
-// 		{
-// 			position = find_closest_bit(stack_a, bit);
-// 			if (position <= stack_a->size / 2)
-// 				ra(stack_a);
-// 			else
-// 				rra(stack_a);
-// 		}
-// 	}
-// 	while (stack_b->size > 0)
-// 		pa(stack_a, stack_b);
-// }
 
 void	radix_sort(t_stack *stack_a, t_stack *stack_b)
 {

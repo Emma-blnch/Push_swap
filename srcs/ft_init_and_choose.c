@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/20 11:28:21 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/20 11:52:51 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,14 @@ void	choose_sort_algo(t_stack *stack_a, t_stack *stack_b)
 		sort_four_numbers(stack_a, stack_b);
 	else if (stack_a->size == 5)
 		sort_five_numbers(stack_a, stack_b);
-	else if (stack_a->size > 5 && stack_a->size <= 100)
-		chunk_sort(stack_a, stack_b);
-	else if (stack_a->size > 100)
+	// else if (stack_a->size > 5 && stack_a->size <= 100)
+	// 	chunk_sort(stack_a, stack_b);
+	// else if (stack_a->size > 100)
+	// {
+	// 	normalize_stack(stack_a);
+	// 	radix_sort(stack_a, stack_b);
+	// }
+	else if (stack_a->size > 5)
 	{
 		normalize_stack(stack_a);
 		radix_sort(stack_a, stack_b);
