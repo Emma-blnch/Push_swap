@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/19 15:02:57 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/20 09:54:54 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,15 @@ void	push(t_stack *stack, int value)
 	t_node	*new_node;
 	t_node	*current;
 
+	if (!stack)
+		return ;
 	new_node = malloc(sizeof(t_node));
 	if (!new_node)
 		return ;
 	new_node->value = value;
 	new_node->next = NULL;
 	if (!stack->top)
-	{
 		stack->top = new_node;
-	}
 	else
 	{
 		current = stack->top;

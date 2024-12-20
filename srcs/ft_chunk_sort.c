@@ -39,25 +39,14 @@ void	move_chunk_to_b(t_stack *stack_a, t_stack *stack_b, int min, int max)
 
 	i = 0;
     size = stack_a->size;
-	 printf("Moving chunk to B: min = %d, max = %d\n", min, max);
 	while (i < size)
 	{
 		if (stack_a->top->value >= min && stack_a->top->value < max)
-		{
-			 printf("Pushing %d from A to B\n", stack_a->top->value);
 			pb(stack_b, stack_a);
-		}
 		else
-		{
-			printf("Rotating A: %d\n", stack_a->top->value);
 			ra(stack_a);
-		}
 		i++;
 	}
-	printf("Chunk moved to B. Stack A:\n");
-    print_stack(stack_a);
-    printf("Stack B:\n");
-    print_stack(stack_b);
 }
 
 int	find_insert_position(t_stack *stack_a, int value)
@@ -71,8 +60,8 @@ int	find_insert_position(t_stack *stack_a, int value)
 	pos = 0;
 	while (current)
 	{
-		if (current->value > value)
-			break ;
+		if (current->value >= value)
+			return (pos);
 		pos++;
 		current = current->next;
 	}
@@ -87,16 +76,15 @@ void	move_chunk_back_to_a(t_stack *stack_a, t_stack *stack_b)
 	{
 		if (!stack_b->top)
 			break ;
-		printf("Stack B before moving back to A:\n");
-        	print_stack(stack_b);
 		pos = find_insert_position(stack_a, stack_b->top->value);
 		printf("Insert position in A for %d is %d\n", stack_b->top->value, pos);
 		smart_rotate(stack_a, pos);
 		pa(stack_a, stack_b);
-		printf("Moved %d from B to A\n", stack_b->top->value);
+		print_stack(stack_a);
+		// printf("Moved %d from B to A\n", stack_b->top->value);
 	}
-	printf("All chunks moved back to A. Stack A:\n");
-   	print_stack(stack_a);
+	// printf("All chunks moved back to A. Stack A:\n");
+   	// print_stack(stack_a);
 }
 
 void	smart_rotate(t_stack *stack, int pos)

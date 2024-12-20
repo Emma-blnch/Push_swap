@@ -6,7 +6,7 @@
 #    By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/09 15:25:09 by eblancha          #+#    #+#              #
-#    Updated: 2024/12/19 15:02:31 by eblancha         ###   ########.fr        #
+#    Updated: 2024/12/20 10:16:34 by eblancha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,9 @@ LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 INC_DIR = includes
 
-SRCS = srcs/ft_init_and_choose.c srcs/ft_utils.c srcs/ft_push.c srcs/ft_swap.c srcs/ft_rotate.c \
-srcs/ft_reverse_rotate.c srcs/ft_short_sort.c srcs/ft_sort_five.c srcs/ft_sort_four.c srcs/ft_radix_sort.c \
-srcs/ft_radix_utils.c srcs/ft_find_number.c srcs/ft_chunk_sort.c srcs/ft_main.c #srcs/ft_test.c \
+SRCS = srcs/ft_init_and_choose.c srcs/ft_utils.c srcs/ft_short_sort.c srcs/ft_sort_five.c \
+srcs/ft_sort_four.c srcs/ft_radix_sort.c srcs/ft_radix_utils.c srcs/ft_find_number.c srcs/ft_chunk_sort.c \
+srcs/ft_test.c #srcs/ft_reverse_rotate.c srcs/ft_push.c srcs/ft_swap.c srcs/ft_rotate.c #srcs/ft_main.c #srcs/ft_test.c \
 
 OBJS = $(SRCS:.c=.o)
 
