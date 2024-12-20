@@ -1,6 +1,4 @@
-normer et organiser, 
-
-reste a faire: marcher chunk sort (msg debug ajouter reste a regler erreur et faire tests unitaires pour toutes les fonctions de chunk sort), check que je comprends tout
+reste a faire: marcher chunk sort, check que je comprends tout
 check sujet correctement
 
 <h1 align="center"> 💻 <strong>Push_swap</strong> </h1>
