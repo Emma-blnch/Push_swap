@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 14:19:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/19 13:35:50 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/20 11:21:26 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	sort_four_numbers(t_stack *stack_a, t_stack *stack_b)
 	if (is_sorted(stack_a))
 		return ;
 	min = find_minimum(stack_a);
-	position = find_min_position(stack_a, min);
+	position = find_value_position(stack_a, min);
 	while (stack_a->top->value != min)
 	{
 		if (position <= stack_a->size / 2)

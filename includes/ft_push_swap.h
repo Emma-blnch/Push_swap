@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:06 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/19 15:06:30 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/20 11:28:32 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	sort_five_numbers(t_stack *stack_a, t_stack *stack_b);
 // find minimum number in stack and check if sorted
 int		find_minimum(t_stack *stack);
 int		find_maximum(t_stack *stack);
-int		find_min_position(t_stack *stack, int min);
+int		find_value_position(t_stack *stack, int value);
 int		is_sorted(t_stack *stack);
 
 // chunk sort
@@ -94,6 +94,6 @@ void	sort_bit(t_stack *stack_a, t_stack *stack_b, int bit);
 void	radix_sort(t_stack *stack_a, t_stack *stack_b);
 void	update_stack_values(t_stack *stack, int *values);
 
-void	print_stack(t_stack *stack);
+// void	print_stack(t_stack *stack);
 
 #endif

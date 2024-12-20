@@ -202,6 +202,7 @@ void test_sort_bit()
             printf("PASSED\n");
         else
             printf("FAILED\n");
+    free(sorted_values);
     }
     else
         printf("test_sort_bit: FAILED\n");
@@ -359,7 +360,6 @@ void test_find_insert_position()
     } else {
         printf("FAILED (expected 0, got %d)\n", pos);
     }
-
     free_stack(stack);
 
     // Cas 2 : Insérer un élément plus petit que tous les éléments existants
@@ -393,9 +393,9 @@ void test_find_insert_position()
     } else {
         printf("FAILED (expected 2, got %d)\n", pos);
     }
+    free_stack(stack);
 
     // Cas 5 : Tous les éléments identiques dans la pile
-    free_stack(stack);
     stack = init_stack();
     push(stack, 10);
     push(stack, 10);
@@ -448,14 +448,15 @@ void test_find_insert_position()
         printf("FAILED (expected 0, got %d)\n", pos);
     }
 
-    pos = find_insert_position(stack, 10); // Devrait retourner 1 (après 5)
+    pos = find_insert_position(stack_a, 10); // Devrait retourner 1 (après 5)
     printf("  Case 7.2 (single element, insert after): ");
     if (pos == 1) {
         printf("PASSED\n");
     } else {
         printf("FAILED (expected 1, got %d)\n", pos);
     }
-    free_stack(stack);
+    free_stack(stack_a);
+    free_stack(stack_b);
 }
 
 void test_move_chunk_to_b()

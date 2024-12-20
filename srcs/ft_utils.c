@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 16:32:33 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/19 13:58:55 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/20 11:00:06 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ void	free_stack(t_stack *stack)
 		free(current);
 		current = next;
 	}
+	stack->top = NULL;
+	stack->size = 0;
 	free(stack);
 }
 

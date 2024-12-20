@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 13:59:48 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/19 15:06:15 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/20 11:20:26 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	find_maximum(t_stack *stack)
 	return (max);
 }
 
-int	find_min_position(t_stack *stack, int min)
+int	find_value_position(t_stack *stack, int value)
 {
 	int			position;
 	t_node		*current;
@@ -55,7 +55,7 @@ int	find_min_position(t_stack *stack, int min)
 	position = 0;
 	while (current)
 	{
-		if (current->value == min)
+		if (current->value == value)
 			break ;
 		current = current->next;
 		position++;

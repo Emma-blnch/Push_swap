@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:36:46 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/20 09:54:54 by eblancha         ###   ########.fr       */
+/*   Updated: 2024/12/20 11:28:21 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,15 +110,15 @@ void	choose_sort_algo(t_stack *stack_a, t_stack *stack_b)
 	}
 }
 
-void	print_stack(t_stack *stack)
-{
-	t_node	*current;
+// void	print_stack(t_stack *stack)
+// {
+// 	t_node	*current;
 
-	current = stack->top;
-	ft_printf("Stack (size: %d):\n", stack->size);
-	while (current)
-	{
-		ft_printf("%d\n", current->value);
-		current = current->next;
-	}
-}
+// 	current = stack->top;
+// 	ft_printf("Stack (size: %d):\n", stack->size);
+// 	while (current)
+// 	{
+// 		ft_printf("%d\n", current->value);
+// 		current = current->next;
+// 	}
+// }
