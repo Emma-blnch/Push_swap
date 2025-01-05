@@ -20,8 +20,8 @@ LIBFT = $(LIBFT_DIR)/libft.a
 INC_DIR = includes
 
 SRCS = srcs/ft_init_and_choose.c srcs/ft_utils.c srcs/ft_short_sort.c srcs/ft_sort_five.c \
-srcs/ft_sort_four.c srcs/ft_radix_sort.c srcs/ft_radix_utils.c srcs/ft_find_number.c srcs/ft_chunk_sort.c \
-srcs/ft_reverse_rotate.c srcs/ft_push.c srcs/ft_swap.c srcs/ft_rotate.c srcs/ft_main.c #srcs/ft_test.c \
+srcs/ft_sort_four.c srcs/ft_radix_sort.c srcs/ft_radix_utils.c srcs/ft_find_number.c \
+srcs/ft_reverse_rotate.c srcs/ft_push.c srcs/ft_swap.c srcs/ft_rotate.c srcs/ft_main.c
 
 OBJS = $(SRCS:.c=.o)
 
