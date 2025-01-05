@@ -28,6 +28,6 @@ int	main(int argc, char **argv)
 	if (!stack_b)
 		error_exit(stack_b);
 	choose_sort_algo(stack_a, stack_b);
-	// print_stack(stack_a);
+	print_stack(stack_a);
 	return (free_stack(stack_a), free_stack(stack_b), 0);
 }

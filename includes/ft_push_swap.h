@@ -77,13 +77,6 @@ int		find_maximum(t_stack *stack);
 int		find_value_position(t_stack *stack, int value);
 int		is_sorted(t_stack *stack);
 
-// chunk sort
-int		find_insert_position(t_stack *stack_a, int value);
-void	move_chunk_to_b(t_stack *stack_a, t_stack *stack_b, int min, int max);
-void	move_chunk_back_to_a(t_stack *stack_a, t_stack *stack_b);
-void	smart_rotate(t_stack *stack, int pos);
-void	chunk_sort(t_stack *stack_a, t_stack *stack_b);
-
 // radix sort
 int		find_max_bits(t_stack *stack);
 //int		find_closest_bit(t_stack *stack, int bit);
