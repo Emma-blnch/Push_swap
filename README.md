@@ -1,4 +1,4 @@
-reste a faire: marcher chunk sort, check que je comprends tout
+reste a faire: check norminette et que je comprends tout
 check sujet correctement
 
 <h1 align="center"> 💻 <strong>Push_swap</strong> </h1>
