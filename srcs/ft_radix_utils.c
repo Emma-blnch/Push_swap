@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 13:57:25 by eblancha          #+#    #+#             */
-/*   Updated: 2024/12/20 10:41:51 by eblancha         ###   ########.fr       */
+/*   Updated: 2025/01/06 13:30:57 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,25 +92,3 @@ void	normalize_stack(t_stack *stack)
 	update_stack_values(stack, values);
 	free(values);
 }
-
-// int	find_closest_bit(t_stack *stack, int bit)
-// {
-// 	int		position;
-// 	int		i;
-// 	t_node	*current;
-
-// 	current = stack->top;
-// 	position = -1;
-// 	i = 0;
-// 	while (current)
-// 	{
-// 		if (((current->value >> bit) & 1) == 0)
-// 		{
-// 			position = i;
-// 			break ;
-// 		}
-// 		current = current->next;
-// 		i++;
-// 	}
-// 	return (position);
-// }

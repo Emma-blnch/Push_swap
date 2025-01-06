@@ -6,7 +6,7 @@
 /*   By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 13:58:38 by eblancha          #+#    #+#             */
-/*   Updated: 2025/01/06 12:58:06 by eblancha         ###   ########.fr       */
+/*   Updated: 2025/01/06 13:32:04 by eblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	main(int argc, char **argv)
 	if (!stack_b)
 		error_exit(stack_b);
 	choose_sort_algo(stack_a, stack_b);
-	//print_stack(stack_a);
 	return (free_stack(stack_a), free_stack(stack_b), 0);
 }
+
+// commande shell : ARG=$(seq -50 50 | shuf -n 10 | tr '\n' ' ')
+// echo "$ARG" | xargs ./push_swap | ./checker_linux $ARG
