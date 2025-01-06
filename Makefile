@@ -6,7 +6,7 @@
 #    By: eblancha <eblancha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/09 15:25:09 by eblancha          #+#    #+#              #
-#    Updated: 2024/12/20 11:24:42 by eblancha         ###   ########.fr        #
+#    Updated: 2025/01/06 13:12:38 by eblancha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-	make clean -C $(LIBFT_DIR)
+	make fclean -C $(LIBFT_DIR)
 
 re: fclean all
 
